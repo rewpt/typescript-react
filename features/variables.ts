@@ -1,5 +1,6 @@
 // All of these are explicit type annotations
 // If we did not assign these types, they would be assigned by default in TS
+// RULE: If declaration and initialization are on same line TS figures out the type
 
 let apples: number = 5;
 let speed: string = 'fast';
@@ -32,3 +33,5 @@ let point: { x: number; y: number} = {
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 }
+
+
