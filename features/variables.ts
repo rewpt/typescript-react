@@ -1,3 +1,6 @@
+// All of these are explicit type annotations
+// If we did not assign these types, they would be assigned by default in TS
+
 let apples: number = 5;
 let speed: string = 'fast';
 let hasName: boolean = true;
@@ -23,4 +26,9 @@ let car: Car = new Car();
 let point: { x: number; y: number} = {
   x: 10,
   y: 20,
+}
+
+//Function, showing the input type and then after the arrow the return type which is void, which means nothing
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
 }
