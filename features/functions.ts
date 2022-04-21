@@ -11,3 +11,13 @@ const add = (a: number, b: number): number => {
 const subtract = (a:number, b:number) => {
   a - b;
 }
+
+//for anonymous functions the syntax is very similar
+function divide(a: number, b:number): number {
+  return a/b;
+}
+
+// we can also assign this anonymous function
+const multiply = function(a:number, b:number): number {
+  return a * b;
+}
