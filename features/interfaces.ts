@@ -25,7 +25,7 @@ interface Vehicle {
   broken: boolean;
 }
 
-const printVehicle22 = (vehicle: Vehicle): void => {
+const printVehicle2 = (vehicle: Vehicle): void => {
   console.log(`Name: ${vehicle.name}`)
   console.log(`Year: ${vehicle.year}`)
   console.log(`broken: ${vehicle.broken}`)
