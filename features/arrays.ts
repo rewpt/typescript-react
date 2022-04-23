@@ -25,3 +25,11 @@ const myCar = carMakers.pop;
 carMakers.map((car: string): string => {
   return car.toUpperCase();
 } ); 
+
+// Flexible types (it knows that any element could 
+// be a date or a string)
+const importantDates = [new Date(), '2030-10-10'];
+
+// This is the same we can only add dates or strings to this arr
+const importantDates1: (Date | string)[] = [];
+
