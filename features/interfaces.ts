@@ -30,3 +30,6 @@ const printVehicle2 = (vehicle: Vehicle): void => {
   console.log(`Year: ${vehicle.year}`)
   console.log(`broken: ${vehicle.broken}`)
 }
+
+// We get no warning because it satisfies the interface
+printVehicle2(oldCivic);
