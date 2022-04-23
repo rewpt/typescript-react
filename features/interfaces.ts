@@ -21,15 +21,28 @@ printVehicle(oldCivic);
 // This is like a variable that refers to a type
 interface Vehicle {
   name: string;
-  year: number;
+  year: Date;
   broken: boolean;
+  //This indicates a function that will return a string
+  summary(): string;
 }
 
+const oldCivic2 = {
+  name: 'civic',
+  year: new Date(),
+  broken: true,
+  summary(): string {
+    return `Name: ${this.name}`;
+  }
+
+};
+
 const printVehicle2 = (vehicle: Vehicle): void => {
-  console.log(`Name: ${vehicle.name}`)
-  console.log(`Year: ${vehicle.year}`)
-  console.log(`broken: ${vehicle.broken}`)
+  console.log(`Name: ${vehicle.name}`);
+  console.log(`Year: ${vehicle.year}`);
+  console.log(`broken: ${vehicle.broken}`);
+  console.log(vehicle.summary());
 }
 
 // We get no warning because it satisfies the interface
-printVehicle2(oldCivic);
+printVehicle2(oldCivic2);
