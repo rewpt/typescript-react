@@ -24,6 +24,9 @@ interface Vehicle {
   year: Date;
   broken: boolean;
   //This indicates a function that will return a string
+
+}
+interface Reportable {
   summary(): string;
 }
 
@@ -36,13 +39,18 @@ const oldCivic2 = {
   }
 
 };
-
-const printVehicle2 = (vehicle: Vehicle): void => {
-  console.log(`Name: ${vehicle.name}`);
-  console.log(`Year: ${vehicle.year}`);
-  console.log(`broken: ${vehicle.broken}`);
-  console.log(vehicle.summary());
+const myDrink = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 50,
+  summary(): string {return `I have ${this.sugar}% sugar`}
+}
+// We can keep in mind that to satisfy an interface it just needs to include
+// what is included in the interface but we can also add more to the object
+const printSummary = (vehicle: Reportable, drink: Reportable): void => {
+  console.log('new', vehicle.summary());
+  console.log('drink', drink.summary());
 }
 
 // We get no warning because it satisfies the interface
-printVehicle2(oldCivic2);
+printVehicle2(oldCivic2, myDrink);
