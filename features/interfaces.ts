@@ -53,4 +53,4 @@ const printSummary = (vehicle: Reportable, drink: Reportable): void => {
 }
 
 // We get no warning because it satisfies the interface
-printVehicle2(oldCivic2, myDrink);
+printSummary(oldCivic2, myDrink);
