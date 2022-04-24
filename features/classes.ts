@@ -21,9 +21,9 @@ class Vehicle {
 }
 
 class Auto extends Vehicle  {
-
+  // We don't add public to color because it's already done in the Vehicle constructor
   constructor(public wheels: number, color: string) {
-    super();
+    super(color);
   }
   // a private method must have continuity of modifiers by having it be private in
   // both the parent and child if it exists in parent and is overridden in the child
@@ -38,5 +38,5 @@ class Auto extends Vehicle  {
   }
 }
 
-const car3 = new Auto('black');
+const car3 = new Auto(2, 'black');
 car3.startDrivingProcess();
