@@ -8,6 +8,12 @@
 
 
 class Vehicle {
+
+  // this public modifier is the same as initializing a color variable and 
+  // assigning it to this.color in the constructor. We could also use private or protected
+  constructor(public color: string) {
+  }
+
   // honk can be used in Auto because it's protected (not private)
   protected honk(): void {
     console.log('beep');
@@ -15,10 +21,15 @@ class Vehicle {
 }
 
 class Auto extends Vehicle  {
+
+  constructor(public wheels: number, color: string) {
+    super();
+  }
   // a private method must have continuity of modifiers by having it be private in
   // both the parent and child if it exists in parent and is overridden in the child
   private drive(): void {
     console.log('vroom')
+    console.log(this.color)
   }
 
   startDrivingProcess(): void {
@@ -27,5 +38,5 @@ class Auto extends Vehicle  {
   }
 }
 
-const car3 = new Auto();
+const car3 = new Auto('black');
 car3.startDrivingProcess();
